@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f4ff 0%, #fce4ff 50%, #fff0e0 100%);
+      font-family: 'Nunito', sans-serif;
+      padding: 2rem;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .header {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #9b59b6;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 10px 40px rgba(100, 80, 200, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.25s; }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card:nth-child(2)::before {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+    }
+    .card:nth-child(3)::before {
+      background: linear-gradient(90deg, #f093fb, #f5576c);
+    }
+
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .card:nth-child(2) .avatar { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .card:nth-child(3) .avatar { background: linear-gradient(135deg, #f093fb, #f5576c); }
+
+    .name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 1rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: #f0f0f0;
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 0.55rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 10px;
+      background: #f8f6ff;
+      transition: background 0.2s;
+    }
+
+    .card:nth-child(3) .phone { background: #fff5fb; }
+
+    .phone svg { flex-shrink: 0; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+
+    <div class="header">📋 Contact Details</div>
+
+    <!-- Contact 1 -->
+    <div class="card">
+      <div class="avatar">SC</div>
+      <div class="name">Sundeep Chikkala</div>
+      <div class="divider"></div>
+      <div class="label">Mobile</div>
+      <div class="phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11 19.79 19.79 0 0 1 1 2.18 2 2 0 0 1 2.96 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15l.92 1.92z"/>
+        </svg>
+        +91 7799234579
+      </div>
+    </div>
+
+    <!-- Contact 2 -->
+    <div class="card">
+      <div class="avatar">TR</div>
+      <div class="name">Tungenwar Rahul Swaraj</div>
+      <div class="divider"></div>
+      <div class="label">Mobile</div>
+      <div class="phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5576c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11 19.79 19.79 0 0 1 1 2.18 2 2 0 0 1 2.96 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15l.92 1.92z"/>
+        </svg>
+        +91 9700131118
+      </div>
+      <div class="phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f5576c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11 19.79 19.79 0 0 1 1 2.18 2 2 0 0 1 2.96 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15l.92 1.92z"/>
+        </svg>
+        +91 0469092200
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
